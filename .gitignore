@@ -1,0 +1,5 @@
+LaTeX-to-PDF
+node_modules/
+dist/
+.DS_Store
+.env

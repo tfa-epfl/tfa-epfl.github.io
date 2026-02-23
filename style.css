@@ -1,0 +1,179 @@
+ :root {
+    --primary-green: #61d37e;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+.heading-font {
+    font-family: 'Roboto', sans-serif;
+}
+.green-accent {
+    color: #61d37e;
+}
+.bg-green-accent {
+    background-color: #61d37e;
+}
+.border-green-accent {
+    border-color: #61d37e;
+}
+
+/* Solid backgrounds with smooth transitions (replaces gradients) */
+.gradient-bg {
+    background-color: #f8fafc; /* light mode */
+    transition: background-color 0.5s ease;
+}
+.dark .gradient-bg {
+    background-color: #0f172a; /* dark mode */
+}
+
+.research-gradient {
+    background-color: #e0f2fe;
+    transition: background-color 0.5s ease;
+}
+.dark .research-gradient {
+    background-color: #0c4a6e;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Animation classes */
+.fade-in-up {
+    opacity: 1;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in-up:not(.animate-in) {
+    opacity: 0;
+}
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Card hover effects */
+.card-hover {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                background-color 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.dark .card-hover:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Publication tag colors */
+.tag-trading { background-color: #3b82f6; color: white; }
+.tag-analysis { background-color: #8b5cf6; color: white; }
+.tag-research { background-color: #10b981; color: white; }
+.tag-forex { background-color: #f59e0b; color: white; }
+.tag-crypto { background-color: #ef4444; color: white; }
+
+.dark .tag-trading { background-color: #1d4ed8; }
+.dark .tag-analysis { background-color: #7c3aed; }
+.dark .tag-research { background-color: #047857; }
+.dark .tag-forex { background-color: #d97706; }
+.dark .tag-crypto { background-color: #dc2626; }
+
+/* Filter buttons */
+.filter-btn {
+    transition: all 0.3s ease;
+}
+.filter-btn.active {
+    background-color: #61d37e;
+    color: white;
+}
+
+/* Dark mode transitions (applied to many elements) */
+.dark-transition {
+    transition: background-color 0.5s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                fill 0.3s ease;
+}
+
+/* Navbar background transition */
+.navbar-bg {
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Dark mode body */
+.dark body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 5px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #61d37e;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+/* Underline animation for links */
+.link-underline {
+    position: relative;
+}
+.link-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #61d37e;
+    transition: width 0.3s ease;
+}
+.link-underline:hover::after {
+    width: 100%;
+}
+
+/* Publication read time indicator */
+.read-time::before {
+    content: '⏱️';
+    margin-right: 5px;
+}
