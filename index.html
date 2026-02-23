@@ -404,178 +404,65 @@
                 
                 <!-- Publications Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="publications-grid">
-                    <!-- Publication 1 -->
-                    <div class="fade-in-up publication-card" data-category="trading">
-                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-                            <div class="p-6 flex-grow">
-                                <div class="flex justify-between items-start mb-3">
-                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading Strategy</span>
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">March 15, 2024</span>
-                                </div>
-                                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Mean Reversion Strategy in S&P 500</h3>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                                    By <span class="font-semibold">Alexandre Dubois</span> • Master in Financial Engineering
-                                </p>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                    An empirical analysis of mean reversion trading strategies applied to S&P 500 constituents with risk-adjusted performance metrics.
-                                </p>
-                                <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4">
-                                    <span class="read-time">12 min read</span>
-                                    <span class="mx-2">•</span>
-                                    <span>PDF + Code</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 pt-0">
-                                <a href="#" class="inline-flex items-center text-green-accent font-medium group">
-                                    Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Publication 2 -->
-                    <div class="fade-in-up delay-100 publication-card" data-category="analysis">
-                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-                            <div class="p-6 flex-grow">
-                                <div class="flex justify-between items-start mb-3">
-                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Market Analysis</span>
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">March 8, 2024</span>
-                                </div>
-                                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">European Energy Markets Post-2022</h3>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                                    By <span class="font-semibold">Sophie Laurent</span> • Master in Energy Management
-                                </p>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                    Comprehensive analysis of structural changes in European energy markets following the 2022 crisis and implications for traders.
-                                </p>
-                                <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4">
-                                    <span class="read-time">18 min read</span>
-                                    <span class="mx-2">•</span>
-                                    <span>Charts & Data</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 pt-0">
-                                <a href="#" class="inline-flex items-center text-green-accent font-medium group">
-                                    Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Publication 3 -->
-                    <div class="fade-in-up delay-200 publication-card" data-category="research">
-                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-                            <div class="p-6 flex-grow">
-                                <div class="flex justify-between items-start mb-3">
-                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Academic Research</span>
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">March 1, 2024</span>
-                                </div>
-                                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">ML Applications in High-Frequency Trading</h3>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                                    By <span class="font-semibold">Thomas Müller</span> • PhD Candidate in Computer Science
-                                </p>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                    Exploring machine learning techniques for predicting micro-price movements and their application in HFT systems.
-                                </p>
-                                <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4">
-                                    <span class="read-time">25 min read</span>
-                                    <span class="mx-2">•</span>
-                                    <span>Python Code Included</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 pt-0">
-                                <a href="#" class="inline-flex items-center text-green-accent font-medium group">
-                                    Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Publication 4 -->
-                    <div class="fade-in-up publication-card" data-category="trading">
-                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-                            <div class="p-6 flex-grow">
-                                <div class="flex justify-between items-start mb-3">
-                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading Strategy</span>
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">Feb 22, 2024</span>
-                                </div>
-                                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Pairs Trading: Tech vs. Finance Sector</h3>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                                    By <span class="font-semibold">Marco Rossi</span> • Bachelor in Mathematics
-                                </p>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                    Statistical arbitrage strategy exploiting price relationships between technology and financial sector ETFs with backtest results.
-                                </p>
-                                <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4">
-                                    <span class="read-time">15 min read</span>
-                                    <span class="mx-2">•</span>
-                                    <span>Backtest Results</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 pt-0">
-                                <a href="#" class="inline-flex items-center text-green-accent font-medium group">
-                                    Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Publication 5 -->
-                    <div class="fade-in-up delay-100 publication-card" data-category="analysis">
-                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-                            <div class="p-6 flex-grow">
-                                <div class="flex justify-between items-start mb-3">
-                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Market Analysis</span>
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">Feb 15, 2024</span>
-                                </div>
-                                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Swiss Franc Safe Haven Status Analysis</h3>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                                    By <span class="font-semibold">Laura Schmidt</span> • Master in Economics
-                                </p>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                    Examining the Swiss Franc's performance during market stress periods and implications for currency portfolio diversification.
-                                </p>
-                                <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4">
-                                    <span class="read-time">20 min read</span>
-                                    <span class="mx-2">•</span>
-                                    <span>Historical Data</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 pt-0">
-                                <a href="#" class="inline-flex items-center text-green-accent font-medium group">
-                                    Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Publication 6 -->
-                    <div class="fade-in-up delay-200 publication-card" data-category="research">
-                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-                            <div class="p-6 flex-grow">
-                                <div class="flex justify-between items-start mb-3">
-                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Academic Research</span>
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">Feb 8, 2024</span>
-                                </div>
-                                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Behavioral Biases in Retail Trading</h3>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                                    By <span class="font-semibold">Anna Kowalski</span> • Master in Psychology & Finance
-                                </p>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                                    Experimental study on cognitive biases affecting retail investors' trading decisions and performance implications.
-                                </p>
-                                <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4">
-                                    <span class="read-time">22 min read</span>
-                                    <span class="mx-2">•</span>
-                                    <span>Survey Data</span>
-                                </div>
-                            </div>
-                            <div class="px-6 pb-6 pt-0">
-                                <a href="memLab.pdf" class="inline-flex items-center text-green-accent font-medium group">
-                                    Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                                </a>
-                            </div>
-                        </div>
+                    <!-- <!-- Publication 1 --> 
+                    <!-- <div class="fade-in-up publication-card" data-category="trading"> -->
+                    <!--     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col"> -->
+                    <!--         <div class="p-6 flex-grow"> -->
+                    <!--             <div class="flex justify-between items-start mb-3"> -->
+                    <!--                 <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading Strategy</span> -->
+                    <!--                 <span class="text-sm text-gray-500 dark:text-gray-400">March 15, 2024</span> -->
+                    <!--             </div> -->
+                    <!--             <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Mean Reversion Strategy in S&P 500</h3> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm"> -->
+                    <!--                 By <span class="font-semibold">Alexandre Dubois</span> • Master in Financial Engineering -->
+                    <!--             </p> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4"> -->
+                    <!--                 An empirical analysis of mean reversion trading strategies applied to S&P 500 constituents with risk-adjusted performance metrics. -->
+                    <!--             </p> -->
+                    <!--             <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4"> -->
+                    <!--                 <span class="read-time">12 min read</span> -->
+                    <!--                 <span class="mx-2">•</span> -->
+                    <!--                 <span>PDF + Code</span> -->
+                    <!--             </div> -->
+                    <!--         </div> -->
+                    <!--         <div class="px-6 pb-6 pt-0"> -->
+                    <!--             <a href="#" class="inline-flex items-center text-green-accent font-medium group"> -->
+                    <!--                 Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i> -->
+                    <!--             </a> -->
+                    <!--         </div> -->
+                    <!--     </div> -->
+                    <!-- </div> -->
+                    <!---->
+                    <!-- <!-- Publication 2 --> 
+                    <!-- <div class="fade-in-up delay-100 publication-card" data-category="analysis"> -->
+                    <!--     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col"> -->
+                    <!--         <div class="p-6 flex-grow"> -->
+                    <!--             <div class="flex justify-between items-start mb-3"> -->
+                    <!--                 <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Market Analysis</span> -->
+                    <!--                 <span class="text-sm text-gray-500 dark:text-gray-400">March 8, 2024</span> -->
+                    <!--             </div> -->
+                    <!--             <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">European Energy Markets Post-2022</h3> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm"> -->
+                    <!--                 By <span class="font-semibold">Sophie Laurent</span> • Master in Energy Management -->
+                    <!--             </p> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4"> -->
+                    <!--                 Comprehensive analysis of structural changes in European energy markets following the 2022 crisis and implications for traders. -->
+                    <!--             </p> -->
+                    <!--             <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4"> -->
+                    <!--                 <span class="read-time">18 min read</span> -->
+                    <!--                 <span class="mx-2">•</span> -->
+                    <!--                 <span>Charts & Data</span> -->
+                    <!--             </div> -->
+                    <!--         </div> -->
+                    <!--         <div class="px-6 pb-6 pt-0"> -->
+                    <!--             <a href="#" class="inline-flex items-center text-green-accent font-medium group"> -->
+                    <!--                 Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i> -->
+                    <!--             </a> -->
+                    <!--         </div> -->
+                    <!--     </div> -->
+                    <!-- </div> -->
+                    <!---->
+                    <!---->
                     </div>
                 </div>
                 
@@ -655,7 +542,7 @@
                         <ul class="space-y-4">
                             <li class="flex items-start group">
                                 <i class="fas fa-globe text-green-accent mt-1 mr-3"></i>
-                                <a href="https://www.thefinanceassociation.com" class="text-gray-400 hover:text-green-accent transition-all duration-300">www.thefinanceassociation.com</a>
+                                <a href="https://tfa-epfl.github.io/" class="text-gray-400 hover:text-green-accent transition-all duration-300">https://tfa-epfl.github.io/</a>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-university text-green-accent mt-1 mr-3"></i>
@@ -663,7 +550,7 @@
                             </li>
                             <li class="flex items-start group">
                                 <i class="fas fa-envelope text-green-accent mt-1 mr-3"></i>
-                                <a href="mailto:tfa@epfl.ch" class="text-gray-400 group-hover:text-green-accent transition-all duration-300">tfa@epfl.ch</a>
+                                <a href="mailto:tfa.epfl2026@gmail.com" class="text-gray-400 group-hover:text-green-accent transition-all duration-300">tfa.epfl2026@gmail.com</a>
                             </li>
                         </ul>
                     </div>
