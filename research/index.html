@@ -1,0 +1,878 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="icon" type="image/png" href="../logo/TFA_SIDE_G2.png">
+    <title>The Finance Association - EPFL</title>
+<script>
+    (function () {
+        const savedTheme = localStorage.getItem('tfa-theme') || 'auto'; // 'light' | 'dark' | 'auto'
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const shouldUseDark = savedTheme === 'dark' || (savedTheme === 'auto' && prefersDark);
+        document.documentElement.classList.toggle('dark', shouldUseDark);
+    })();
+</script>
+	<link rel="stylesheet" href="../tailwind.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 dark-transition">
+    <!-- Navigation - ADDED PUBLICATIONS LINK -->
+    <nav class="navbar-bg bg-white shadow-md fixed top-0 w-full z-50 dark:bg-gray-900 dark-transition">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 flex items-center justify-center shadow-lg">
+					<img src="../logo/TFA_SIDE_G2.png" alt="">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800 dark:text-white">The Finance Association</h1>
+                    <p class="text-xs text-gray-600 dark:text-gray-400">EPFL</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                       Home 
+                    </a>
+                    <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Activities
+                    </a>
+                    <a href="../partners/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Partnership
+                    </a>
+                    <a href="../events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Events
+                    </a>
+                    <!-- ADDED: Publications link -->
+                    <a href="#publications" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Research
+                    </a>
+                    <a href="../team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                    	Team
+                    </a>
+                    <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Theme toggle button -->
+                <button id="theme-toggle" class="theme-toggle w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 flex items-center justify-center shadow-sm transition-all duration-300">
+                    <i id="theme-icon" class="fas fa-sun text-gray-700 dark:text-yellow-300"></i>
+                </button>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu - ADDED PUBLICATIONS LINK -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700 px-4 py-3 shadow-lg dark-transition">
+            <div class="flex flex-col space-y-3">
+                <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Home</a>
+                <a href="#activities" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Activities</a>
+                <a href="../events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Events</a>
+                <!-- ADDED: Publications link -->
+                <a href="#publications" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Research</a>
+                <a href="../team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Team</a>
+                <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Loading animation -->
+    <div id="loading" class="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center fade-in-up">
+            <div class="w-16 h-16 rounded-full bg-green-accent flex items-center justify-center mx-auto mb-4 animate-pulse">
+                <span class="text-white font-bold text-2xl">TFA</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 font-medium">The Finance Association</p>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <header class="gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 dark-transition">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 dark:text-white fade-in-up">
+					Quant Research Track
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto fade-in-up delay-200">
+					The Quant Research Track is at the heart of TFA. It operates on the basis of a set of clearly defined methodological principles designed to produce credible and reproducible results. The Quant Research Track is managed by a team of experienced researchers who are responsible for designing and implementing research projects.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4 fade-in-up delay-300">
+                    <a href="#publications" class="bg-green-accent hover:bg-green-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+						See our research
+                    </a>
+                    <a href="#pipeline" class="bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium py-3 px-8 rounded-lg border border-gray-300 dark:border-gray-600 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1">
+						Discover our pipeline
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<!-- QUANT TRACK -->
+	<section id="about" class="scroll-mt-28 py-16 bg-white dark:bg-gray-800 dark-transition">
+  <div class="container mx-auto px-4 fade-in-up delay-100">
+	<div class="max-w-6xl mx-auto py-8">
+	  <div class="text-center mb-12">
+		<h3 class="heading-font text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Approach & Philosophy</h3>
+		<div class="w-24 h-1 bg-green-accent mx-auto mb-6 rounded-full"></div>
+		<p class="text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-lg">
+		  The Quant Research Track is the core activity of TFA. Teams work in small groups across full research cycles, producing a documented
+		  research paper reviewed internally before any external communication. Results are presented in a public showcase at the end of the cycle.
+		</p>
+	  </div>
+
+	  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-20">
+		<!-- Organization -->
+		<div class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm fade-in-up delay-100">
+		  <h4 class="heading-font text-2xl font-bold text-gray-800 dark:text-white mb-4">How we work</h4>
+		  <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+			<li class="flex gap-3">
+			  <i class="fa-solid fa-users text-green-accent mt-1"></i>
+			  <span>Small teams, full-cycle ownership: data, modeling, implementation, writing.</span>
+			</li>
+			<li class="flex gap-3">
+			  <i class="fa-solid fa-file-lines text-green-accent mt-1"></i>
+			  <span>Each cycle results in a documented research paper aligned with professional standards.</span>
+			</li>
+			<li class="flex gap-3">
+			  <i class="fa-solid fa-clipboard-check text-green-accent mt-1"></i>
+			  <span>Internal peer-review before any external presentation or publication.</span>
+			</li>
+			<li class="flex gap-3">
+			  <i class="fa-solid fa-chalkboard-user text-green-accent mt-1"></i>
+			  <span>End-of-cycle showcase with members, mentors, and (where relevant) industry professionals.</span>
+			</li>
+		  </ul>
+		</div>
+
+		<!-- Philosophy -->
+		<!-- Philosophy -->
+<div class="relative overflow-hidden bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-8 shadow-sm fade-in-up delay-200">
+
+<!-- subtle accent glow -->
+<div class="pointer-events-none absolute -top-24 -right-24 w-56 h-56 rounded-full bg-green-accent/10 blur-3xl"></div>
+
+<h4 class="heading-font text-2xl font-bold text-gray-800 dark:text-white mb-4">
+  Fundamental philosophy
+</h4>
+
+<!-- quote block -->
+<div class="relative pl-5 border-l-4 border-green-accent/70">
+  <p class="text-gray-700 dark:text-gray-200 text-lg leading-relaxed">
+	The objective of the <span class="font-semibold text-green-accent">Quant Research Track</span>
+	is not rapid trading or the maximisation of short-term returns.
+  </p>
+
+  <p class="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+	The aim is to build a <span class="font-semibold">structured, reproducible and credible process</span> —
+	a framework in which every analytical decision is documented, every assumption is explicit,
+	and every result is subject to critical scrutiny.
+  </p>
+</div>
+
+<!-- emphasis strip -->
+<div class="mt-6 flex items-start gap-3 rounded-lg bg-gray-50 dark:bg-gray-700 opacity:30 border border-gray-200/60 dark:border-gray-600/40 p-4">
+  <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-green-accent/15">
+	<i class="fa-solid fa-scale-balanced text-green-accent"></i>
+  </div>
+  <p class="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">
+	This prepares members for industry, where <span class="font-semibold text-green-accent">process quality</span>
+	consistently takes precedence over the appeal of isolated results.
+  </p>
+</div>
+
+</div>
+	   
+	  </div>
+
+	  </div>
+</section>
+
+
+<!---->
+<!--     <!-- About Section --> 
+<!-- 	<section id="about" class="scroll-mt-28 py-16 bg-white dark:bg-gray-800 dark-transition"> -->
+<!--         <div class="container mx-auto px-4"> -->
+<!--             <div class="max-w-6xl mx-auto"> -->
+<!--                 <div class="text-center mb-16 fade-in-up py-6"> -->
+<!--                     <h2 class=" py-6 heading-font text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Approach & Philosophy</h2> -->
+<!--                     <div class="w-24 h-1 bg-green-accent mx-auto mb-6 rounded-full"></div> -->
+<!--                 </div> -->
+<!---->
+<!--                 <!-- Mission Pillars --> 
+<!--                 <div id="mission" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"> -->
+<!--                     <!-- Same as before, shortened for brevity -->
+<!--                     <div class="fade-in-up delay-200"> -->
+<!--                         <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md overflow-hidden card-hover border border-gray-200 dark:border-gray-600 card-hover dark-transition h-full"> -->
+<!--                             <div class="w-14 h-14 rounded-full bg-green-400 dark:bg-green-900/30 flex items-center justify-center mb-5 mx-auto"> -->
+<!--                                 <i class="fas fa-users text-green-accent text-2xl"></i> -->
+<!--                             </div> -->
+<!--                             <h3 class="heading-font text-xl font-bold mb-3 text-center text-gray-800 dark:text-white">Work Organization</h3> -->
+<!--                             <p class="text-gray-600 dark:text-gray-300 text-center"> -->
+<!-- 							Members of the Quant Research Track work in small teams, -->
+<!-- with each team responsible for developing -->
+<!-- a systematic strategy over a full cycle. This format -->
+<!-- promotes collaboration, the exchange of ideas, and the efficient division -->
+<!-- of responsibilities—data analysis, modeling, -->
+<!-- implementation, and writing. -->
+<!--                             </p> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!---->
+<!--                     <div class="fade-in-up delay-200"> -->
+<!--                         <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md overflow-hidden card-hover border border-gray-200 dark:border-gray-600 card-hover dark-transition h-full"> -->
+<!--                             <div class="w-14 h-14 rounded-full bg-green-400 dark:bg-green-900/30 flex items-center justify-center mb-5 mx-auto"> -->
+<!-- 								<i class="fa-solid fa-clipboard-check text-green-accent text-2xl"></i> -->
+<!--                             </div> -->
+<!--                             <h3 class="heading-font text-xl font-bold mb-3 text-center text-gray-800 dark:text-white">Awareness</h3> -->
+<!--                             <p class="text-gray-600 dark:text-gray-300 text-center"> -->
+<!-- 							Each research cycle culminates in the writing of a documented research paper, which undergoes an internal review process before any external communication. The results are then presented publicly at a showcase at the end of the cycle, before an audience composed of association members, mentors, and, where applicable, industry professionals. -->
+<!--                             </p> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!---->
+<!--                     <div class="fade-in-up delay-200"> -->
+<!--                         <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md overflow-hidden card-hover border border-gray-200 dark:border-gray-600 card-hover dark-transition h-full"> -->
+<!--                             <div class="w-14 h-14 rounded-full bg-green-400 dark:bg-green-900/30 flex items-center justify-center mb-5 mx-auto"> -->
+<!-- 								<i class="fa-solid fa-scale-balanced text-green-accent text-2xl"></i> -->
+<!--                             </div> -->
+<!--                             <h3 class="heading-font text-xl font-bold mb-3 text-center text-gray-800 dark:text-white">Fondamental Philosophy</h3> -->
+<!--                             <strong class="text-gray-600 dark:text-gray-300 text-center"> -->
+<!-- 								The objective of the Quant Research Track is not -->
+<!-- high-frequency trading or maximizing -->
+<!-- short-term returns. -->
+<!--                             </strong> -->
+<!--                             <p class="text-gray-600 dark:text-gray-300 text-center"> -->
+<!-- 							It is about building a structured, -->
+<!-- reproducible, and credible process—a framework in -->
+<!-- which every analytical decision is -->
+<!-- documented, every assumption is explicit, -->
+<!-- and every result is subject to critical review -->
+<!-- . -->
+<!-- 							</p> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!---->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </section> -->
+<!---->
+
+<!-- ================= RESEARCH PIPELINE ================= -->
+<section id="pipeline" class="fade-in-up delay-200 py-16 bg-gray-50 dark:bg-gray-900 dark-transition">
+  <div class="container mx-auto px-6 max-w-6xl">
+
+    <!-- Title -->
+    <div class="fade-in-up delay-200 mb-12">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white"> Research Pipeline</h2>
+                    <div class="w-24 h-1 bg-green-accent mx-auto rounded-full"></div>
+                </div>
+      <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
+        TFA’s research pipeline follows a structured eight-step framework designed to ensure rigor, reproducibility, and methodological credibility.
+      </p>
+    </div>
+
+    <!-- 4 SUMMARY BLOCKS -->
+    <div class="fade-in-up delay-100 grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+
+      <div class="fade-in-up delay-100 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 text-center">
+        <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">
+		  <i class="fa-solid fa-lightbulb text-green-accent text-2xl"></i>
+			Idea</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Formulate a testable investment hypothesis
+        </p>
+      </div>
+
+      <div class="fade-in-up delay-100 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 text-center">
+        <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">
+			<i class="fa-solid fa-database text-green-accent text-2xl"></i>
+			Data</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Define methodology and data sources
+        </p>
+      </div>
+
+      <div class="fade-in-up delay-100 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 text-center">
+        <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">
+			<i class="fa-solid fa-chart-line text-green-accent text-2xl"></i>
+			Backtest</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Validate the strategy on historical data
+        </p>
+      </div>
+
+      <div class="fade-in-up delay-100 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 text-center">
+        <h3 class="font-semibold text-lg mb-2 text-gray-800 dark:text-white">
+			<i class="fa-solid fa-magnifying-glass-chart text-green-accent text-2xl"></i>
+			Robustness</h3>
+        <p class="text-gray-600 dark:text-gray-400 text-sm">
+          Submit to rigorous stress testing
+        </p>
+      </div>
+
+    </div>
+
+<!-- Steps intro -->
+<p class="fade-in-up delay-100 text-gray-600 dark:text-gray-400 mb-8">
+  Each stage of the pipeline addresses a specific requirement in the construction of a credible deliverable:
+</p>
+
+<!-- 01-08 GRID (nicer) -->
+<div class="fade-in-up delay-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+  <!-- STEP -->
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-start justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+          01
+        </span>
+        <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+          Idea &amp; Hypothesis
+        </h4>
+      </div>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Formulation of an investable hypothesis grounded in explicit economic rationale. The idea must be testable and refutable.
+    </p>
+  </div>
+
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-start justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+          02
+        </span>
+        <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+          Data & Methodology
+        </h4>
+      </div>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Selection of data sources, cleaning, structuring, and definition of the methodological framework. Documentation of choices and justifications.
+    </p>
+  </div>
+
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+        03
+      </span>
+      <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+        Backtest &amp; Validation
+      </h4>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Implementation and testing on historical data. Analysis with attention to potential biases (look-ahead, survivorship, overfitting).
+    </p>
+  </div>
+
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+        04
+      </span>
+      <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+        Robustness &amp; Stress Testing
+      </h4>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Assessment of stability across market conditions, parameter settings, and time periods. Identification of points of fragility.
+    </p>
+  </div>
+
+  <!-- 05 -->
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+        05
+      </span>
+      <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+        Paper Writing
+      </h4>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Formal documentation of context, methodology, results, risks, and limitations in a structured research format.
+    </p>
+  </div>
+
+  <!-- 06 -->
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+        06
+      </span>
+      <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+        Internal Review
+      </h4>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Peer-review within the association to verify methodological consistency, documentation quality, and transparency of assumptions.
+    </p>
+  </div>
+
+  <!-- 07 -->
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+        07
+      </span>
+      <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+        Showcase
+      </h4>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Public presentation of results before members, mentors, and industry professionals. Analytical choices must be defended and discussed.
+    </p>
+  </div>
+
+  <!-- 08 -->
+  <div class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/60 backdrop-blur p-6 shadow-sm hover:shadow-md transition-shadow">
+    <div class="flex items-center gap-3">
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-accent font-bold">
+        08
+      </span>
+      <h4 class="text-base md:text-lg font-semibold text-gray-800 dark:text-white">
+        Optional Monitoring
+      </h4>
+    </div>
+    <div class="mt-4 h-px w-full bg-gray-200 dark:bg-gray-700"></div>
+    <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+      Post-publication tracking under controlled educational conditions to study implementation constraints and signal degradation.
+    </p>
+  </div>
+
+</div>
+
+
+
+  </div>
+</section>
+
+
+    <!-- NEW: Publications & Research Section -->
+    <section id="publications" class="gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 dark-transition">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Research & Publications</h2>
+                    <div class="w-24 h-1 bg-green-accent mx-auto mb-6 rounded-full"></div>
+                    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
+                        Discover the latest research papers, trading strategies, and financial insights from our talented members. New publications are added weekly.
+                    </p>
+                </div>
+                
+                <!-- Filter buttons -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10 fade-in-up delay-100">
+                    <button class="filter-btn active px-4 py-2 rounded-lg bg-white bg-green-accent text-white font-medium" data-filter="all">
+                        All Publications
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="trading">
+                        Trading Strategies
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="analysis">
+                        Market Analysis
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="research">
+                        Academic Research
+                    </button>
+                </div>
+                
+                <!-- Publications Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="publications-grid">
+                    <!-- <!-- Publication 1 --> 
+                    <!-- <div class="fade-in-up publication-card" data-category="trading"> -->
+                    <!--     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col"> -->
+                    <!--         <div class="p-6 flex-grow"> -->
+                    <!--             <div class="flex justify-between items-start mb-3"> -->
+                    <!--                 <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading Strategy</span> -->
+                    <!--                 <span class="text-sm text-gray-500 dark:text-gray-400">March 15, 2024</span> -->
+                    <!--             </div> -->
+                    <!--             <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Mean Reversion Strategy in S&P 500</h3> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm"> -->
+                    <!--                 By <span class="font-semibold">Alexandre Dubois</span> • Master in Financial Engineering -->
+                    <!--             </p> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4"> -->
+                    <!--                 An empirical analysis of mean reversion trading strategies applied to S&P 500 constituents with risk-adjusted performance metrics. -->
+                    <!--             </p> -->
+                    <!--             <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4"> -->
+                    <!--                 <span class="read-time">12 min read</span> -->
+                    <!--                 <span class="mx-2">•</span> -->
+                    <!--                 <span>PDF + Code</span> -->
+                    <!--             </div> -->
+                    <!--         </div> -->
+                    <!--         <div class="px-6 pb-6 pt-0"> -->
+                    <!--             <a href="#" class="inline-flex items-center text-green-accent font-medium group"> -->
+                    <!--                 Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i> -->
+                    <!--             </a> -->
+                    <!--         </div> -->
+                    <!--     </div> -->
+                    <!-- </div> -->
+                    <!---->
+                    <!-- <!-- Publication 2 --> 
+                    <!-- <div class="fade-in-up delay-100 publication-card" data-category="analysis"> -->
+                    <!--     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col"> -->
+                    <!--         <div class="p-6 flex-grow"> -->
+                    <!--             <div class="flex justify-between items-start mb-3"> -->
+                    <!--                 <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Market Analysis</span> -->
+                    <!--                 <span class="text-sm text-gray-500 dark:text-gray-400">March 8, 2024</span> -->
+                    <!--             </div> -->
+                    <!--             <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">European Energy Markets Post-2022</h3> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm"> -->
+                    <!--                 By <span class="font-semibold">Sophie Laurent</span> • Master in Energy Management -->
+                    <!--             </p> -->
+                    <!--             <p class="text-gray-600 dark:text-gray-300 mb-4"> -->
+                    <!--                 Comprehensive analysis of structural changes in European energy markets following the 2022 crisis and implications for traders. -->
+                    <!--             </p> -->
+                    <!--             <div class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4"> -->
+                    <!--                 <span class="read-time">18 min read</span> -->
+                    <!--                 <span class="mx-2">•</span> -->
+                    <!--                 <span>Charts & Data</span> -->
+                    <!--             </div> -->
+                    <!--         </div> -->
+                    <!--         <div class="px-6 pb-6 pt-0"> -->
+                    <!--             <a href="#" class="inline-flex items-center text-green-accent font-medium group"> -->
+                    <!--                 Read Full Paper <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i> -->
+                    <!--             </a> -->
+                    <!--         </div> -->
+                    <!--     </div> -->
+                    <!-- </div> -->
+                    <!---->
+                    <!---->
+                    </div>
+                </div>
+                
+                <!-- <!-- Call to Action --> 
+                <!-- <div class="text-center fade-in-up delay-300"> -->
+                <!--     <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg max-w-3xl mx-auto"> -->
+                <!--         <h3 class="heading-font text-2xl font-bold mb-4 text-gray-800 dark:text-white">Want to Publish Your Research?</h3> -->
+                <!--         <p class="text-gray-600 dark:text-gray-300 mb-6"> -->
+                <!--             Are you a TFA member with research, trading strategies, or financial analysis you'd like to share? Submit your work for publication on our platform. -->
+                <!--         </p> -->
+                <!--         <div class="flex flex-col sm:flex-row justify-center gap-4"> -->
+                <!--             <a href="#" class="bg-green-accent hover:bg-green-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"> -->
+                <!--                 Submit Your Paper -->
+                <!--             </a> -->
+                <!--             <a href="#" class="bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium py-3 px-8 rounded-lg border border-gray-300 dark:border-gray-600 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1"> -->
+                <!--                 View Submission Guidelines -->
+                <!--             </a> -->
+                <!--         </div> -->
+                <!--     </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-gray-900 dark:bg-gray-950 text-white pt-12 pb-8 dark-transition">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div class="fade-in-up">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center shadow-lg">
+								<img src="../logo/TFA_SIDE_G2.png" alt="">
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold">The Finance Association</h2>
+                                <p class="text-gray-400 text-sm">EPFL</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-6">
+                            L'association de finance de l'École Polytechnique Fédérale de Lausanne, créant un pont entre les étudiants et le secteur financier.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/tfa.epfl" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-accent flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/tfa-epfl/" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-accent flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-accent flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="fade-in-up delay-100">
+                        <h3 class="text-xl font-bold mb-6">Useful links</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#about" class="text-gray-400 hover:text-green-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                                About TFA
+                            </a></li>
+                            <li><a href="#activities" class="text-gray-400 hover:text-green-accent transition-all duration-300 flex items-center group">
+                            <li><a href="#events" class="text-gray-400 hover:text-green-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                               Events 
+                            </a></li>
+                            <li><a href="#publications" class="text-gray-400 hover:text-green-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                                Publications
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="fade-in-up delay-200">
+                        <h3 class="text-xl font-bold mb-6">Contact</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start group">
+                                <i class="fas fa-globe text-green-accent mt-1 mr-3"></i>
+                                <a href="tfa-epfl.ch" class="text-gray-400 hover:text-green-accent transition-all duration-300">tfa-epfl.ch</a>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-university text-green-accent mt-1 mr-3"></i>
+                                <span class="text-gray-400">École Polytechnique Fédérale de Lausanne</span>
+                            </li>
+                            <li class="flex items-start group">
+                                <i class="fas fa-envelope text-green-accent mt-1 mr-3"></i>
+                                <a href="mailto:tfa.epfl2026@gmail.com" class="text-gray-400 group-hover:text-green-accent transition-all duration-300">tfa.epfl2026@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8 text-center fade-in-up delay-300">
+                    <p class="text-gray-400">© 2026 The Finance Association - EPFL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-green-accent text-white rounded-full shadow-lg flex items-center justify-center opacity-0 transition-all duration-300 hover:shadow-xl hover:scale-110 z-40">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                
+                initScrollAnimations();
+                
+                checkScroll();
+            }, 500);
+        });
+
+		const themeToggle = document.getElementById('theme-toggle');
+		const themeIcon = document.getElementById('theme-icon');
+		const htmlElement = document.documentElement;
+		
+		const savedTheme = localStorage.getItem('tfa-theme') || 'auto';
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		
+		if (savedTheme === 'dark' || (savedTheme === 'auto' && prefersDark)) {
+    		htmlElement.classList.add('dark');
+    		themeIcon.classList.remove('fa-sun');
+    		themeIcon.classList.add('fa-moon');
+		} else {
+    		htmlElement.classList.remove('dark');
+    		themeIcon.classList.remove('fa-moon');
+    		themeIcon.classList.add('fa-sun');
+		}
+		htmlElement.classList.remove('light');
+		
+		themeToggle.addEventListener('click', function() {
+    		htmlElement.classList.toggle('dark');
+		
+    		if (htmlElement.classList.contains('dark')) {
+        		themeIcon.classList.remove('fa-sun');
+        		themeIcon.classList.add('fa-moon');
+        		localStorage.setItem('tfa-theme', 'dark');
+    		} else {
+        		themeIcon.classList.remove('fa-moon');
+        		themeIcon.classList.add('fa-sun');
+        		localStorage.setItem('tfa-theme', 'light');
+    		}
+		
+    		this.style.transform = 'rotate(360deg)';
+    		setTimeout(() => {
+        		this.style.transform = 'rotate(0)';
+    		}, 500);
+});
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+            
+            checkScroll();
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                if (href === '#' || href.startsWith('#!')) return;
+                
+                e.preventDefault();
+                
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
+                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
+                }
+                
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        function initScrollAnimations() {
+            document.querySelectorAll('section, .fade-in-up').forEach(el => {
+                if (!el.classList.contains('fade-in-up')) {
+                    el.classList.add('fade-in-up');
+                }
+            });
+            
+            checkScroll();
+        }
+
+        function checkScroll() {
+            const elements = document.querySelectorAll('.fade-in-up');
+            
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementBottom = el.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100 && elementBottom > 0) {
+                    setTimeout(() => {
+                        el.classList.add('animate-in');
+                    }, 100);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const publicationCards = document.querySelectorAll('.publication-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-green-accent', 'text-white');
+                        btn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-800', 'dark:text-gray-300');
+                    });
+                    
+                    this.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-800', 'dark:text-gray-300');
+                    this.classList.add('active', 'bg-green-accent', 'text-white');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    publicationCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                            }, 100);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initScrollAnimations, 100);
+            
+            window.addEventListener('scroll', checkScroll);
+            
+            window.addEventListener('resize', checkScroll);
+        });
+    </script>
+</body>
+</html>
+

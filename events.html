@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="icon" type="image/png" href="logo/TFA_SIDE_G2.png">
     <title>The Finance Association - EPFL</title>
 <script>
     (function () {
@@ -13,9 +14,9 @@
         document.documentElement.classList.toggle('dark', shouldUseDark);
     })();
 </script>
-	<link rel="stylesheet" href="tailwind.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="tailwind.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -38,7 +39,20 @@
                 <!-- Desktop menu -->
                 <div class="hidden md:flex space-x-6">
                     <a href="index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-							Home
+                       Home 
+                    </a>
+                    <a href="partners/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Partnership
+                    </a>
+                    <a href="events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Events
+                    </a>
+                    <!-- ADDED: Publications link -->
+                    <a href="research/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Research
+                    </a>
+                    <a href="team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                    	Team
                     </a>
                     <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
                         Contact
@@ -60,13 +74,17 @@
         <!-- Mobile menu - ADDED PUBLICATIONS LINK -->
         <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700 px-4 py-3 shadow-lg dark-transition">
             <div class="flex flex-col space-y-3">
-                <a href="index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Home</a>
+                <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Home</a>
+                <a href="../events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Events</a>
+                <!-- ADDED: Publications link -->
+                <a href="../research/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Research</a>
+                <a href="../team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Team</a>
                 <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Loading animation -->
+   <!-- Loading animation -->
     <div id="loading" class="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex items-center justify-center transition-opacity duration-500">
         <div class="text-center fade-in-up">
             <div class="w-16 h-16 rounded-full bg-green-accent flex items-center justify-center mx-auto mb-4 animate-pulse">
@@ -86,12 +104,122 @@
             </div>
         </div>
     </header>
-	<div class="text-center py-20">
-  <h3 class="text-2xl font-semibold mb-3">Nothing at the moment...</h3>
-  <p class="text-gray-500 dark:text-gray-400">
-  We are currently preparing new events. Stay tuned!
-  </p>
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10 fade-in-up">
+        <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Past Events</h2>
+        <p class="text-gray-500 dark:text-gray-400 mt-2">
+          Highlights from previous sessions and talks.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+		  <!-- Jane Street Event -->
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl fade-in-up">
+
+  <!-- Gradient Accent Top -->
+  <div class="h-1 w-full bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400"></div>
+
+  <div class="p-6">
+
+    <!-- Badges -->
+    <div class="flex justify-between items-start mb-4">
+        <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">
+        Guest Talk
+      </span>
+
+      <span class="text-xs font-semibold px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">
+        Past
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3 leading-snug">
+      🚀 Jane Street — Strategy & Product Virtual Talk
+    </h3>
+
+    <!-- Description -->
+    <p class="text-gray-600 dark:text-gray-300 mb-6">
+      Exploring how Strategy & Product teams drive firmwide impact at the intersection of 
+      <span class="font-semibold text-indigo-500">technology, finance, and operations</span>.
+    </p>
+
+    <!-- Info Grid -->
+    <div class="space-y-3 text-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900">
+          <i class="fas fa-calendar-alt text-indigo-500"></i>
+        </div>
+        <span>Wednesday, November 19th — 5:30–6:30 PM (GMT)</span>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-indigo-100 dark:bg-indigo-900">
+          <i class="fas fa-video text-indigo-500"></i>
+        </div>
+        <span>Virtual (Zoom)</span>
+      </div>
+    </div>
+
+  </div>
 </div>
+        <!-- /Past Event Card -->
+		<!-- Finance Crash Course Event -->
+<div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl fade-in-up">
+
+  <!-- Gradient Accent Top -->
+  <div class="h-1 w-full bg-gradient-to-r from-green-accent via-emerald-400 to-teal-400"></div>
+
+  <div class="p-6">
+
+    <!-- Badge -->
+    <div class="flex justify-between items-start mb-4">
+      <span class="bg-green-accent text-white text-xs font-bold px-3 py-1 rounded-full mr-3">
+        Finance Series
+      </span>
+
+      <span class="text-xs font-semibold px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700">
+        Past
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-3 leading-snug">
+      Finance Crash Course Series — Session 1
+    </h3>
+
+    <!-- Description -->
+    <p class="text-gray-600 dark:text-gray-300 mb-6">
+      Introduction to finance fundamentals, market mechanics, and a hands-on 
+      <span class="font-semibold text-green-accent">Python for Finance & Algorithmic Trading</span> workshop.
+    </p>
+
+    <!-- Info Grid -->
+    <div class="space-y-3 text-sm">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
+          <i class="fas fa-calendar-alt text-green-accent"></i>
+        </div>
+        <span>Thursday, October 9th, 2025 — 19:00–21:00</span>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-green-100 dark:bg-green-900">
+          <i class="fas fa-map-marker-alt text-green-accent"></i>
+        </div>
+        <span>CM1 106, EPFL Campus</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- /Past Event Card -->
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <!-- Contact & Footer -->
@@ -149,7 +277,7 @@
                         <ul class="space-y-4">
                             <li class="flex items-start group">
                                 <i class="fas fa-globe text-green-accent mt-1 mr-3"></i>
-                                <a href="tfa-epfl.github.io" class="text-gray-400 hover:text-green-accent transition-all duration-300">tfa-epfl.github.io</a>
+                                <a href="tfa-epfl.ch" class="text-gray-400 hover:text-green-accent transition-all duration-300">tfa-epfl.ch</a>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-university text-green-accent mt-1 mr-3"></i>
