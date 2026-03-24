@@ -78,26 +78,32 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 dark-transition">
-    <div class="container mx-auto px-4 text-center">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 dark:text-white fade-in-up">
-          Team
-        </h1>
-        <p class="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto fade-in-up delay-200">
-          Meet the people behind TFA’s four divisions: Quant Research, Events & Sponsorship, Communication, and IT & Infrastructure.
-        </p>
-      </div>
+<!-- HERO -->
+<header
+  class="relative h-[calc(100vh - 80px)] md:h-[80vh] bg-cover bg-center bg-no-repeat flex items-center fade-in-up"
+  style="background-image: url('image/all_team.jpg');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
+
+  <!-- Content -->
+  <div class="relative container mx-auto px-4 text-center  fade-in-up delay-300" style="padding-top: 15%;">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+        Team
+      </h1>
+      <p class="text-lg text-gray-200 max-w-3xl mx-auto">
+        Meet the people behind TFA's four divisions
+      </p>
     </div>
-  </header>
-  <!---->
+  </div>
+</header>
 
 
 
 
   <!-- COMMITTEE -->
-<section id="committee" class="py-16 bg-gray-50 dark:bg-gray-900 dark-transition">
+<section id="committee" class="py-16 bg-gray-50 dark:bg-gray-900 dark-transition fade-in-up delay-200">
   <div class="container mx-auto px-4">
     <div class="max-w-6xl mx-auto">
       <div class="mb-10 text-center fade-in-up">
@@ -113,10 +119,10 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-up">
 
         <!-- President 1 -->
-        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm card-hover dark-transition fade-in-up">
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm card-hover dark-transition fade-in-up delay-300">
           <!-- <div class="aspect-square w-full rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-700 mb-5"> -->
           <!--   <img src="team/placeholder.jpg" alt="President photo" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300"> -->
           <!-- </div> -->
@@ -194,11 +200,11 @@
           <!-- </div> -->
           <div class="flex items-start justify-between gap-3">
             <div>
-              <h4 class="font-semibold text-lg text-gray-800 dark:text-white">Santiago</h4>
+              <h4 class="font-semibold text-lg text-gray-800 dark:text-white">Santiago Rivadeneira</h4>
               <p class="text-gray-600 dark:text-gray-300">VP Marketing</p>
-              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Degree / Field</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Msc Applied Mathematics</p>
             </div>
-            <a href="#" aria-label="LinkedIn"
+            <a href="https://www.linkedin.com/in/santiago-rivadeneira-044651335/" aria-label="LinkedIn"
                class="shrink-0 w-10 h-10 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:border-green-accent transition">
               <i class="fab fa-linkedin-in text-gray-600 dark:text-gray-300"></i>
             </a>
@@ -415,7 +421,7 @@
               </div>
             </div>
             <p class="text-gray-400 mb-6">
-				TFA is an independent student association recognized by EPFL
+				TFA is a student association recognized by EPFL
             </p>
             <div class="flex space-x-4">
               <a href="https://www.facebook.com/tfa.epfl" target="_blank" rel="noopener noreferrer"
