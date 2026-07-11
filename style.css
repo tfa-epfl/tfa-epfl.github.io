@@ -178,4 +178,16 @@ html {
     margin-right: 5px;
 }
 
+.tag-paper {
+    background-color: rgba(16, 185, 129, 0.10);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.40);
+}
+.tag-summary {
+    background-color: rgba(100, 116, 139, 0.10);
+    color: #475569;
+    border: 1px solid rgba(100, 116, 139, 0.40);
+}
+.dark .tag-paper   { color: #34d399; border-color: rgba(52, 211, 153, 0.45); }
+.dark .tag-summary { color: #94a3b8; border-color: rgba(148, 163, 184, 0.45); }
 

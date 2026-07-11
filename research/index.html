@@ -473,387 +473,356 @@
 </section>
 
 
-    <!-- NEW: Publications & Research Section -->
-    <section id="publications" class="gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 dark-transition">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-12 fade-in-up">
-                    <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Research & Publications</h2>
-                    <div class="w-24 h-1 bg-green-accent mx-auto mb-6 rounded-full"></div>
-                    <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
-                        Discover the latest research papers, trading strategies, and financial insights from our talented members. New publications are added weekly.
-                    </p>
+
+<!-- Publications & Research Section -->
+<section id="publications" class="gradient-bg pt-32 pb-20 md:pt-40 md:pb-28 dark-transition">
+    <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Research & Publications</h2>
+                <div class="w-24 h-1 bg-green-accent mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
+                    Discover the latest research papers, trading strategies, and financial insights from our talented members. New publications are added weekly.
+                </p>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10 fade-in-up delay-100">
+                <button class="filter-btn active px-4 py-2 rounded-lg bg-white bg-green-accent text-white font-medium" data-filter="all">
+                    All Publications
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="trading">
+                    Trading Strategies
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="analysis">
+                    Market Analysis
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="research">
+                    Academic Research
+                </button>
+            </div>
+
+            <!-- Publications Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="publications-grid">
+
+                <!-- Publication 7 -->
+                <div class="fade-in-up delay-600 publication-card" data-category="trading analysis research">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
+                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
+                                    <span class="tag-paper text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-file-alt mr-1"></i>Full Paper</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">May 17, 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">A Deep Learning Framework for Momentum-Based Trading on New York Stocks Combining Technical and Sentiment Factors</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Haewon Jeong, Alexandre Goumaz, Philipp Glaser</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Combines technical indicators, sentiment analysis, and momentum trading into a unified deep learning investment framework for NYSE stocks.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/TFA_paper_sentiment_score.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read More<i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Filter buttons -->
-                <div class="flex flex-wrap justify-center gap-3 mb-10 fade-in-up delay-100">
-                    <button class="filter-btn active px-4 py-2 rounded-lg bg-white bg-green-accent text-white font-medium" data-filter="all">
-                        All Publications
-                    </button>
-                    <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="trading">
-                        Trading Strategies
-                    </button>
-                    <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="analysis">
-                        Market Analysis
-                    </button>
-                    <button class="filter-btn px-4 py-2 rounded-lg bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium hover:bg-gray-300 dark:hover:bg-gray-600" data-filter="research">
-                        Academic Research
-                    </button>
-                </div> 
 
-				<!-- Publications Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="publications-grid">
-
-  <!-- Publication 7 -->
-    <div class="fade-in-up delay-600 publication-card" data-category="trading analysis research">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
-                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">May 17, 2026</span>
+                <!-- Publication 3 -->
+                <div class="fade-in-up delay-200 publication-card" data-category="crypto research">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-crypto text-xs font-bold px-3 py-1 rounded-full">Crypto</span>
+                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
+                                    <span class="tag-summary text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-align-left mr-1"></i>Summary</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">March 15, 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Predicting High-Frequency Cryptocurrency Direction using Hybrid CNN-LSTM Networks</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Michel Saliba</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Hybrid CNN-LSTM architecture for high-frequency cryptocurrency forecasting, demonstrating out-of-sample predictive performance on XRP.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/TFA_CNN_LSTM_MichelSaliba.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">A Deep Learning Framework for Momentum-Based Trading on New York Stocks Combining Technical and Sentiment Factors</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">Haewon Jeong, Alexandre Goumaz, Philipp Glaser</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Combines technical indicators, sentiment analysis, and momentum trading into a unified deep learning investment framework for NYSE stocks.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/TFA_paper_sentiment_score.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read  More<i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-
-
-
-    <!-- Publication 3 -->
-    <div class="fade-in-up delay-200 publication-card" data-category="crypto research">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-crypto text-xs font-bold px-3 py-1 rounded-full">Crypto</span>
-                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">March 15, 2026</span>
+                <!-- Delta Hedging -->
+                <div class="fade-in-up publication-card" data-category="research analysis">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
+                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
+                                    <span class="tag-paper text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-file-alt mr-1"></i>Full Paper</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">April 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Delta Hedging Optimization with Reinforcement Learning</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Jens Cancio, Youssef Chelaifa, Szymon  Ścibior</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                This project aims to build a Reinforcement Learning agent that learns optimal dynamic hedging strategies for derivatives.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/RL_Hedging_Paper.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Predicting High-Frequency Cryptocurrency Direction using Hybrid CNN-LSTM Networks</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">Michel Saliba</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Hybrid CNN-LSTM architecture for high-frequency cryptocurrency forecasting, demonstrating out-of-sample predictive performance on XRP.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/TFA_CNN_LSTM_MichelSaliba.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-
-    <div class="fade-in-up publication-card" data-category="research analysis">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
-                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">April 2026</span>
+                <!-- Fill Probability -->
+                <div class="fade-in-up delay-200 publication-card" data-category="crypto market-making execution">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-crypto text-xs font-bold px-3 py-1 rounded-full">Crypto</span>
+                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
+                                    <span class="tag-paper text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-file-alt mr-1"></i>Full Paper</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">April 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">
+                                Fill Probability Is Not Enough: Empirical Fill Modeling and Trade Selection in BTC/USDT Market Making
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Michel Bassil, Chandrasekhara Devarakonda</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                This study evaluates whether fill probability alone is sufficient for market making profitability. Using high-frequency Binance data, it shows that while fill prediction is strong, profitability only emerges when optimizing directly for realized PnL.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/Fill-Probability.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Delta Hedging Optimization with Reinforcement Learning</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">Jens Cancio, Youssef Chelaifa, Szymon  Ścibior</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-				This project aims to build a Reinforcement Learning agent that learns optimal dynamic hedging strategies for derivatives.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/RL_Hedging_Paper.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-
-
-
-
-
-<div class="fade-in-up delay-200 publication-card" data-category="crypto market-making execution">
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-        <div class="p-6 flex-grow">
-
-            <div class="flex justify-between items-start mb-3">
-                <span class="tag-crypto text-xs font-bold px-3 py-1 rounded-full">Crypto</span>
-                <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
-                <span class="text-sm text-gray-500 dark:text-gray-400">April 2026</span>
-            </div>
-
-            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">
-                Fill Probability Is Not Enough: Empirical Fill Modeling and Trade Selection in BTC/USDT Market Making
-            </h3>
-
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                By <span class="font-semibold">Michel Bassil, Chandrasekhara Devarakonda</span>
-            </p>
-
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                This study evaluates whether fill probability alone is sufficient for market making profitability. Using high-frequency Binance data, it shows that while fill prediction is strong, profitability only emerges when optimizing directly for realized PnL.
-            </p>
-
-        </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/Fill-Probability.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-    </div>
-</div>
-
-
-	<div class="fade-in-up delay-200 publication-card" data-category="research equity nlp">
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-        <div class="p-6 flex-grow">
-            
-            <div class="flex justify-between items-start mb-3">
-                <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
-                <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
-                <span class="text-sm text-gray-500 dark:text-gray-400">April 2026</span>
-            </div>
-
-            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">
-                Trading the Tonality Dispersion in Earnings Call Q&A Sections
-            </h3>
-
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                By <span class="font-semibold">Mert Ülgüner, Linze Li</span>
-            </p>
-
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                This project studies whether dispersion in tone during earnings call Q&A sections contains predictive trading signals. Using NLP, it analyzes heterogeneity in analyst–management interactions to capture uncertainty and disagreement beyond average sentiment.
-            </p>
-
-        </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/Trading the Tonality Dispersion in Earnings Call Q&A Sections.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-    </div>
-</div>
-
-
-<div class="fade-in-up delay-200 publication-card" data-category="research macro quant">
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-        <div class="p-6 flex-grow">
-
-            <div class="flex justify-between items-start mb-3">
-                <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
-                <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
-                <span class="text-sm text-gray-500 dark:text-gray-400">April 2026</span>
-            </div>
-
-            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">
-                A Regime-Aware Equity Timing Strategy Derived from the Marketron Model
-            </h3>
-
-            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                By <span class="font-semibold">Pablo Habib, David Attias</span>
-            </p>
-
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-                This project explores a physics-inspired Marketron framework for equity markets, introducing a nonlinear latent-state model with regime shifts, memory effects, and metastability to improve equity timing beyond classical GBM assumptions.
-            </p>
-
-        </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/TFA-Pablo.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-    </div>
-</div>
-
-
-
-
-
-   <!-- Publication 6 -->
-    <div class="fade-in-up delay-500 publication-card" data-category="trading">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
-                <span class="tag-crypto text-xs font-bold px-3 py-1 rounded-full">Crypto</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">May 27, 2026</span>
+                <!-- Tonality Dispersion -->
+                <div class="fade-in-up delay-200 publication-card" data-category="research equity nlp">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
+                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
+                                    <span class="tag-paper text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-file-alt mr-1"></i>Full Paper</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">April 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">
+                                Trading the Tonality Dispersion in Earnings Call Q&A Sections
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Mert Ülgüner, Linze Li</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                This project studies whether dispersion in tone during earnings call Q&A sections contains predictive trading signals. Using NLP, it analyzes heterogeneity in analyst–management interactions to capture uncertainty and disagreement beyond average sentiment.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/Trading the Tonality Dispersion in Earnings Call Q&A Sections.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Mining Market Sentiment: A Comparative Analysis of Domain-Specific Language Models on Cryptocurrency News for Market Forecasting</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">Karl Saliba, Michel Saliba</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-				We test five NLP models (TextBlob, CryptoBERT, FinBERT, Qwen2.5-7B-Instruct) on 2021–2023 crypto news for agreement and predictive value against market data. Bitcoin resists sentiment-based prediction, but Qwen2.5-7B-Instruct predicts Ethereum/altcoin direction at 53% accuracy, mostly above chance. Open-weight models appear viable for crypto sentiment analysis without retraining.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-					<a href="papers/TFA_CSA-1.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-
-
-
-
-    <!-- Publication 1 -->
-    <div class="fade-in-up publication-card" data-category="trading analysis">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
-                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400"> 2026</span>
+                <!-- Regime-Aware Marketron -->
+                <div class="fade-in-up delay-200 publication-card" data-category="research macro quant">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
+                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
+                                    <span class="tag-paper text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-file-alt mr-1"></i>Full Paper</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">April 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">
+                                A Regime-Aware Equity Timing Strategy Derived from the Marketron Model
+                            </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Pablo Habib, David Attias</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                This project explores a physics-inspired Marketron framework for equity markets, introducing a nonlinear latent-state model with regime shifts, memory effects, and metastability to improve equity timing beyond classical GBM assumptions.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/TFA-Pablo.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">ML-based Alpha Ranking Portfolio Optimization</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">François Goybet, Gavriil Kharkhordine, Haocong Li</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-				We use cross-sectional learning-to-rank (XGBoost) on Open Source Asset Pricing characteristics to rank stocks monthly rather than predict returns. This yields significant long–short spreads, monotonic deciles, and strong out-of-sample performance, benchmarked against a transaction-cost-aware RL baseline.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/ml_alpha_ranking_portfolio.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-
-    <!-- Publication 4 -->
-    <div class="fade-in-up delay-300 publication-card" data-category="analysis research">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
-                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">March 2026</span>
+                <!-- Publication 6 -->
+                <div class="fade-in-up delay-500 publication-card" data-category="trading">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
+                                    <span class="tag-crypto text-xs font-bold px-3 py-1 rounded-full">Crypto</span>
+                                    <span class="tag-paper text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-file-alt mr-1"></i>Full Paper</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">May 27, 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Mining Market Sentiment: A Comparative Analysis of Domain-Specific Language Models on Cryptocurrency News for Market Forecasting</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Karl Saliba, Michel Saliba</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                We test five NLP models (TextBlob, CryptoBERT, FinBERT, Qwen2.5-7B-Instruct) on 2021–2023 crypto news for agreement and predictive value against market data. Bitcoin resists sentiment-based prediction, but Qwen2.5-7B-Instruct predicts Ethereum/altcoin direction at 53% accuracy, mostly above chance. Open-weight models appear viable for crypto sentiment analysis without retraining.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/TFA_CSA-1.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">A Quantitative Framework for Trading Post-Shock Volatility Relaxation in Financial Markets</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">Aryan Pandey, Rayan Harfouche</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-				This project models market activity following macroeconomic shocks, drawing on prior research (Lillo & Mantegna) that shows extreme price movements decay in a pattern similar to earthquake aftershocks. It tests whether that post-shock volatility relaxation is predictable enough to exploit in systematic trading strategies.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/Post-Shock Volatility Relaxation Strategy.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <!-- Publication 5 -->
-    <div class="fade-in-up delay-400 publication-card" data-category="trading analysis">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
-                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">March 16, 2026</span>
+                <!-- Publication 1 -->
+                <div class="fade-in-up publication-card" data-category="trading analysis">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
+                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
+                                    <span class="tag-paper text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-file-alt mr-1"></i>Full Paper</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">ML-based Alpha Ranking Portfolio Optimization</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">François Goybet, Gavriil Kharkhordine, Haocong Li</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                We use cross-sectional learning-to-rank (XGBoost) on Open Source Asset Pricing characteristics to rank stocks monthly rather than predict returns. This yields significant long–short spreads, monotonic deciles, and strong out-of-sample performance, benchmarked against a transaction-cost-aware RL baseline.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/ml_alpha_ranking_portfolio.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read More <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Regime-Based Trading Strategy</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">Gaël Saugy, Balázs Peisz, Axel Turin-Plessia</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Systematic trading strategy adapting to market regimes, using signal selection and asset universe adjustments.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/Regime_based_strategy_TFA.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <!-- Publication 2 -->
-    <div class="fade-in-up delay-100 publication-card" data-category="trading research">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
-            <div class="p-6 flex-grow">
-                <div class="flex justify-between items-start mb-3">
-                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
-                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">March 2026</span>
+                <!-- Publication 4 -->
+                <div class="fade-in-up delay-300 publication-card" data-category="analysis research">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
+                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
+                                    <span class="tag-summary text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-align-left mr-1"></i>Summary</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">March 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">A Quantitative Framework for Trading Post-Shock Volatility Relaxation in Financial Markets</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Aryan Pandey, Rayan Harfouche</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                This project models market activity following macroeconomic shocks, drawing on prior research (Lillo & Mantegna) that shows extreme price movements decay in a pattern similar to earthquake aftershocks. It tests whether that post-shock volatility relaxation is predictable enough to exploit in systematic trading strategies.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/Post-Shock Volatility Relaxation Strategy.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Pairs Trading: An application on US and Swiss Equity Markets</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    By <span class="font-semibold">Moutie Mohamed Ali, Guillen Steulet, Jules Broglin</span>
-                </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Market-neutral statistical arbitrage strategy applied to US and Swiss equities, extending vanilla pairs trading with calibrated methods.
-                </p>
-            </div>
-            <div class="px-6 pb-6 pt-0">
-                <a href="papers/Pairs_Trading_Project.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
-                    Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
-                </a>
+
+                <!-- Publication 5 -->
+                <div class="fade-in-up delay-400 publication-card" data-category="trading analysis">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
+                                    <span class="tag-analysis text-xs font-bold px-3 py-1 rounded-full">Analysis</span>
+                                    <span class="tag-summary text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-align-left mr-1"></i>Summary</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">March 16, 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Regime-Based Trading Strategy</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Gaël Saugy, Balázs Peisz, Axel Turin-Plessia</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Systematic trading strategy adapting to market regimes, using signal selection and asset universe adjustments.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/Regime_based_strategy_TFA.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="fade-in-up delay-100 publication-card" data-category="trading research">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden card-hover dark-transition h-full flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <div class="flex justify-between items-start mb-3 gap-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="tag-trading text-xs font-bold px-3 py-1 rounded-full">Trading</span>
+                                    <span class="tag-research text-xs font-bold px-3 py-1 rounded-full">Research</span>
+                                    <span class="tag-summary text-xs font-bold px-3 py-1 rounded-full"><i class="fas fa-align-left mr-1"></i>Summary</span>
+                                </div>
+                                <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">March 2026</span>
+                            </div>
+                            <h3 class="heading-font text-xl font-bold mb-3 text-gray-800 dark:text-white">Pairs Trading: An application on US and Swiss Equity Markets</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                                By <span class="font-semibold">Moutie Mohamed Ali, Guillen Steulet, Jules Broglin</span>
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Market-neutral statistical arbitrage strategy applied to US and Swiss equities, extending vanilla pairs trading with calibrated methods.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-6 pt-0">
+                            <a href="papers/Pairs_Trading_Project.pdf" target="_blank" class="inline-flex items-center text-green-accent font-medium group">
+                                Read Summary <i class="fas fa-arrow-right ml-2 group-hover:ml-4 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-
-
-   
-  
-</div>
-                
-                <!-- <!-- Call to Action --> 
-                <!-- <div class="text-center fade-in-up delay-300"> -->
-                <!--     <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg max-w-3xl mx-auto"> -->
-                <!--         <h3 class="heading-font text-2xl font-bold mb-4 text-gray-800 dark:text-white">Want to Publish Your Research?</h3> -->
-                <!--         <p class="text-gray-600 dark:text-gray-300 mb-6"> -->
-                <!--             Are you a TFA member with research, trading strategies, or financial analysis you'd like to share? Submit your work for publication on our platform. -->
-                <!--         </p> -->
-                <!--         <div class="flex flex-col sm:flex-row justify-center gap-4"> -->
-                <!--             <a href="#" class="bg-green-accent hover:bg-green-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"> -->
-                <!--                 Submit Your Paper -->
-                <!--             </a> -->
-                <!--             <a href="#" class="bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-300 font-medium py-3 px-8 rounded-lg border border-gray-300 dark:border-gray-600 transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-1"> -->
-                <!--                 View Submission Guidelines -->
-                <!--             </a> -->
-                <!--         </div> -->
-                <!--     </div> -->
-                <!-- </div> -->
-
-
-
-
-
-            </div>
-
-
-
-        </div>
-
-
-
-
-    </section>
-
+</section>
 
 
 
