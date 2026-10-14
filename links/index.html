@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="../logo/TFA_SIDE_G2.png">
+    <title>TFA EPFL — Links</title>
+<script>
+    (function () {
+        const savedTheme = localStorage.getItem('tfa-theme') || 'auto'; // 'light' | 'dark' | 'auto'
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const shouldUseDark = savedTheme === 'dark' || (savedTheme === 'auto' && prefersDark);
+        document.documentElement.classList.toggle('dark', shouldUseDark);
+    })();
+</script>
+	<link rel="stylesheet" href="../tailwind.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 dark-transition">
+    <!-- Navigation -->
+    <nav class="navbar-bg bg-white shadow-md fixed top-0 w-full z-50 dark:bg-gray-900 dark-transition">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="../" class="flex items-center space-x-3">
+                <div class="w-10 h-10 flex items-center justify-center shadow-lg">
+					<img src="../logo/TFA_SIDE_G2.png" alt="TFA Logo">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800 dark:text-white">The Finance Association</h1>
+                    <p class="text-xs text-gray-600 dark:text-gray-400">EPFL</p>
+                </div>
+            </a>
+
+            <div class="flex items-center space-x-4">
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Home
+                    </a>
+                    <a href="../partners/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Partnership
+                    </a>
+                    <a href="../communication/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Communication
+                    </a>
+                    <a href="../events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Events
+                    </a>
+                    <a href="../research/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Research
+                    </a>
+                    <a href="../team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Team
+                    </a>
+                    <a href="index.html" class="font-medium text-green-accent transition-all duration-300 link-underline">
+                        Links
+                    </a>
+                    <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Theme toggle button -->
+                <button id="theme-toggle" class="theme-toggle w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 flex items-center justify-center shadow-sm transition-all duration-300">
+                    <i id="theme-icon" class="fas fa-sun text-gray-700 dark:text-yellow-300"></i>
+                </button>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700 px-4 py-3 shadow-lg dark-transition">
+            <div class="flex flex-col space-y-3">
+                <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Home</a>
+                <a href="../partners/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Partnership</a>
+                <a href="../communication/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Communication</a>
+                <a href="../events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Events</a>
+                <a href="../research/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Research</a>
+                <a href="../team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Team</a>
+                <a href="index.html" class="font-medium text-green-accent py-2 transition-all duration-300">Links</a>
+                <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Loading animation -->
+    <div id="loading" class="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center fade-in-up">
+            <div class="w-16 h-16 rounded-full bg-green-accent flex items-center justify-center mx-auto mb-4 animate-pulse">
+                <span class="text-white font-bold text-2xl">TFA</span>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 font-medium">The Finance Association</p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg pt-32 pb-16 md:pt-40 md:pb-20 dark-transition">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="w-24 h-24 flex items-center justify-center mx-auto mb-6 fade-in-up">
+                    <img src="../logo/TFA_SIDE_G2.png" alt="TFA Logo">
+                </div>
+                <h1 class="heading-font text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 dark:text-white fade-in-up">
+                    Find us everywhere
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto fade-in-up delay-200">
+                    Follow The Finance Association to stay up to date with our events, research and content.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- LINKS -->
+    <section class="py-20 bg-white dark:bg-gray-800 dark-transition fade-in-up">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+
+                <div class="text-center mb-12">
+                    <h2 class="heading-font text-4xl font-bold mb-4 text-gray-800 dark:text-white fade-in-up delay-100">
+                        Our Links
+                    </h2>
+                    <div class="w-24 h-1 bg-green-accent mx-auto mb-6 rounded-full"></div>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <!-- Website -->
+                    <a href="https://tfa-epfl.ch" class="group flex items-center gap-5 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-40 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm card-hover dark-transition fade-in-up delay-100">
+                        <div class="w-14 h-14 flex-shrink-0 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                            <i class="fas fa-globe text-green-accent text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="heading-font text-xl font-bold text-gray-800 dark:text-white">Website</h3>
+                            <p class="text-gray-600 dark:text-gray-400 truncate">tfa-epfl.ch</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-400 group-hover:text-green-accent transition-all duration-300"></i>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/tfa-epfl/" target="_blank" rel="noopener" class="group flex items-center gap-5 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-40 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm card-hover dark-transition fade-in-up delay-200">
+                        <div class="w-14 h-14 flex-shrink-0 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                            <i class="fab fa-linkedin-in text-green-accent text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="heading-font text-xl font-bold text-gray-800 dark:text-white">LinkedIn</h3>
+                            <p class="text-gray-600 dark:text-gray-400 truncate">TFA EPFL</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-400 group-hover:text-green-accent transition-all duration-300"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/tfa.epfl/" target="_blank" rel="noopener" class="group flex items-center gap-5 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-40 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm card-hover dark-transition fade-in-up delay-300">
+                        <div class="w-14 h-14 flex-shrink-0 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                            <i class="fab fa-instagram text-green-accent text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="heading-font text-xl font-bold text-gray-800 dark:text-white">Instagram</h3>
+                            <p class="text-gray-600 dark:text-gray-400 truncate">@tfa.epfl</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-400 group-hover:text-green-accent transition-all duration-300"></i>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@tfa.epfl_ch" target="_blank" rel="noopener" class="group flex items-center gap-5 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-40 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm card-hover dark-transition fade-in-up delay-300">
+                        <div class="w-14 h-14 flex-shrink-0 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                            <i class="fab fa-youtube text-green-accent text-xl"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="heading-font text-xl font-bold text-gray-800 dark:text-white">YouTube</h3>
+                            <p class="text-gray-600 dark:text-gray-400 truncate">@tfa.epfl_ch</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-400 group-hover:text-green-accent transition-all duration-300"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 dark:bg-gray-950 text-white pt-12 pb-8 dark-transition">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div class="fade-in-up">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center shadow-lg">
+								<img src="../logo/TFA_SIDE_G2.png" alt="">
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold">The Finance Association</h2>
+                                <p class="text-gray-400 text-sm">EPFL</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-6">
+						TFA is a student association recognized by EPFL
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/company/tfa-epfl/" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-accent flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/tfa.epfl/" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-accent flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@tfa.epfl_ch" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-green-accent flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 shadow-md">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="fade-in-up delay-100">
+                        <h3 class="text-xl font-bold mb-6">Useful links</h3>
+                        <ul class="space-y-3">
+                            <li><a href="../index.html" class="text-gray-400 hover:text-green-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                                About TFA
+                            </a></li>
+                            <li><a href="../events.html" class="text-gray-400 hover:text-green-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                                Events
+                            </a></li>
+                            <li><a href="../research/index.html" class="text-gray-400 hover:text-green-accent transition-all duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></i>
+                                Publications
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="fade-in-up delay-200">
+                        <h3 class="text-xl font-bold mb-6">Contact</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start group">
+                                <i class="fas fa-globe text-green-accent mt-1 mr-3"></i>
+                                <a href="https://tfa-epfl.ch/" class="text-gray-400 hover:text-green-accent transition-all duration-300">tfa-epfl.ch</a>
+                            </li>
+                            <li class="flex items-start">
+								<div class="w-12 h-12 flex items-center justify-center shadow-lg">
+    							<img src="../logo/EPFL_Logo_Digital_WHITE_PROD.png" alt="">
+  							</div>
+                                <span class="text-gray-400">École Polytechnique Fédérale de Lausanne</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-800 pt-8 text-center fade-in-up delay-300">
+                    <p class="text-gray-400">© 2026 The Finance Association - EPFL. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-green-accent text-white rounded-full shadow-lg flex items-center justify-center opacity-0 transition-all duration-300 hover:shadow-xl hover:scale-110 z-40">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading');
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                initScrollAnimations();
+                checkScroll();
+            }, 500);
+        });
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('tfa-theme') || 'auto';
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (savedTheme === 'auto' && prefersDark)) {
+            htmlElement.classList.add('dark');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        } else {
+            htmlElement.classList.remove('dark');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', function() {
+            htmlElement.classList.toggle('dark');
+
+            if (htmlElement.classList.contains('dark')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('tfa-theme', 'dark');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('tfa-theme', 'light');
+            }
+
+            this.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0)';
+            }, 500);
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
+                document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+
+            checkScroll();
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href.startsWith('#!')) return;
+                e.preventDefault();
+
+                const targetElement = document.getElementById(href.substring(1));
+                if (targetElement) {
+                    const navbarHeight = document.querySelector('nav').offsetHeight;
+                    window.scrollTo({
+                        top: targetElement.offsetTop - navbarHeight - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        function initScrollAnimations() {
+            document.querySelectorAll('section, .fade-in-up').forEach(el => {
+                if (!el.classList.contains('fade-in-up')) {
+                    el.classList.add('fade-in-up');
+                }
+            });
+            checkScroll();
+        }
+
+        function checkScroll() {
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100 && rect.bottom > 0) {
+                    setTimeout(() => {
+                        el.classList.add('animate-in');
+                    }, 100);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initScrollAnimations, 100);
+            window.addEventListener('resize', checkScroll);
+        });
+    </script>
+</body>
+</html>
