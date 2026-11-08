@@ -370,13 +370,23 @@
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-6">
-      <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Partners</p>
+      <p class="text-sm font-semibold uppercase tracking-widest text-gray-600 dark:text-gray-300">Sponsors</p>
     </div>
 
+	<!-- Static sponsor row. When there are more sponsors, delete this block and
+	     uncomment the scrolling version below. -->
+	<div class="flex flex-wrap justify-center items-center gap-x-16 gap-y-8">
+    <img src="logo/partners/bcp_logo.png" alt="BCV" class="h-12 opacity-70 hover:opacity-100 transition">
+    <img src="logo/partners/Jane_Street_Capital_Logo.svg.png" alt="Jane Street" class="h-12 opacity-70 hover:opacity-100 transition">
+    <img src="logo/partners/Hudson_River_Trading_Logo.svg.png" alt="Hudson River Trading" class="h-12 opacity-70 hover:opacity-100 transition">
+    <img src="logo/partners/Citadel_LLC_Logo.svg.webp" alt="Citadel" class="h-12 opacity-70 hover:opacity-100 transition">
+	</div>
+
+	<!-- Scrolling sponsor strip (disabled while there are few sponsors).
 	<div class="overflow-hidden relative">
   <div class="flex gap-16 animate-scroll items-center">
 
-    <!-- LOGOS -->
+    LOGOS
     <img src="logo/partners/bcp_logo.png" class="h-12 opacity-70 hover:opacity-100 transition">
     <img src="logo/partners/Jane_Street_Capital_Logo.svg.png" class="h-12 opacity-70 hover:opacity-100 transition">
     <img src="logo/partners/Hudson_River_Trading_Logo.svg.png" class="h-12 opacity-70 hover:opacity-100 transition">
@@ -393,6 +403,19 @@
 
   </div>
 </div>
+	-->
+
+    <!-- PARTNERS (non-sponsor partners, kept below and smaller than sponsors) -->
+    <div class="text-center mt-12 mb-4">
+      <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400">Partners</p>
+    </div>
+    <div class="flex justify-center">
+      <a href="https://www.tradermath.org" target="_blank" rel="noopener" aria-label="Tradermath"
+         class="opacity-70 hover:opacity-100 transition">
+        <img src="logo/partners/tradermath-logo.png" alt="Tradermath" class="h-8 dark:hidden">
+        <img src="logo/partners/tradermath-logo-on-dark.png" alt="Tradermath" class="h-8 hidden dark:block">
+      </a>
+    </div>
   </div>
 </section>
 
@@ -638,29 +661,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- RESOURCES (non-sponsor partners, kept separate from sponsors above) -->
-    <section id="resources" class="py-16 gradient-bg dark-transition scroll-mt-28">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-10">
-                    <h2 class="heading-font text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Resources</h2>
-                    <div class="w-24 h-1 bg-green-accent mx-auto mb-6 rounded-full"></div>
-                    <p class="text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-lg">
-                        Tools we recommend to our members to prepare for trading and quantitative interviews.
-                    </p>
-                </div>
-
-                <div class="flex justify-center">
-                    <a href="https://www.tradermath.org" target="_blank" rel="noopener"
-                       class="rounded-xl border border-gray-200 dark:border-gray-700 p-6 bg-white dark:bg-gray-900 dark:bg-opacity-40 shadow-sm card-hover transition-all duration-300 flex items-center justify-center">
-                        <img src="logo/partners/tradermath-logo.png" alt="Tradermath" class="h-12 dark:hidden">
-                        <img src="logo/partners/tradermath-logo-on-dark.png" alt="Tradermath" class="h-12 hidden dark:block">
-                    </a>
-                </div>
             </div>
         </div>
     </section>
