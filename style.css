@@ -8,6 +8,16 @@ body {
 .heading-font {
     font-family: 'Roboto', sans-serif;
 }
+.tfa-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.dark .tfa-logo,
+footer .tfa-logo {
+    filter: brightness(0) invert(1);
+}
 .green-accent {
     color: #61d37e;
 }
@@ -190,4 +200,19 @@ html {
 }
 .dark .tag-paper   { color: #34d399; border-color: rgba(52, 211, 153, 0.45); }
 .dark .tag-summary { color: #94a3b8; border-color: rgba(148, 163, 184, 0.45); }
+
+/* Keep the wide Susquehanna wordmark within the wrapping sponsor row. */
+.sponsor-logo--susquehanna {
+    width: 16rem;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    filter: brightness(0);
+}
+.dark .sponsor-logo--susquehanna {
+    filter: none;
+}
+.dark .sponsor-logo--jump {
+    filter: brightness(0) invert(1);
+}
 
