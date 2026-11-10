@@ -1,5 +1,12 @@
- :root {
-    --primary-green: #61d37e;
+:root {
+    --primary-green: #005c41;
+    --primary-green-rgb: 0 92 65;
+    --accent-text-rgb: 0 92 65;
+}
+/* A lighter brand tint keeps accent text readable on dark surfaces. */
+.dark,
+footer {
+    --accent-text-rgb: 147 201 181;
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -19,13 +26,13 @@ footer .tfa-logo {
     filter: brightness(0) invert(1);
 }
 .green-accent {
-    color: #61d37e;
+    color: rgb(var(--accent-text-rgb));
 }
 .bg-green-accent {
-    background-color: #61d37e;
+    background-color: var(--primary-green);
 }
 .border-green-accent {
-    border-color: #61d37e;
+    border-color: var(--primary-green);
 }
 
 /* Solid backgrounds with smooth transitions (replaces gradients) */
@@ -88,13 +95,13 @@ html {
 /* Publication tag colors */
 .tag-trading { background-color: #3b82f6; color: white; }
 .tag-analysis { background-color: #8b5cf6; color: white; }
-.tag-research { background-color: #10b981; color: white; }
+.tag-research { background-color: var(--primary-green); color: white; }
 .tag-forex { background-color: #f59e0b; color: white; }
 .tag-crypto { background-color: #ef4444; color: white; }
 
 .dark .tag-trading { background-color: #1d4ed8; }
 .dark .tag-analysis { background-color: #7c3aed; }
-.dark .tag-research { background-color: #047857; }
+.dark .tag-research { background-color: var(--primary-green); }
 .dark .tag-forex { background-color: #d97706; }
 .dark .tag-crypto { background-color: #dc2626; }
 
@@ -103,7 +110,7 @@ html {
     transition: all 0.3s ease;
 }
 .filter-btn.active {
-    background-color: #61d37e;
+    background-color: var(--primary-green);
     color: white;
 }
 
@@ -153,7 +160,7 @@ html {
     background: #475569;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #61d37e;
+    background: var(--primary-green);
 }
 
 /* Theme toggle button */
@@ -175,7 +182,7 @@ html {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #61d37e;
+    background-color: var(--primary-green);
     transition: width 0.3s ease;
 }
 .link-underline:hover::after {
@@ -189,16 +196,16 @@ html {
 }
 
 .tag-paper {
-    background-color: rgba(16, 185, 129, 0.10);
-    color: #059669;
-    border: 1px solid rgba(16, 185, 129, 0.40);
+    background-color: rgb(var(--primary-green-rgb) / 0.10);
+    color: var(--primary-green);
+    border: 1px solid rgb(var(--primary-green-rgb) / 0.40);
 }
 .tag-summary {
     background-color: rgba(100, 116, 139, 0.10);
     color: #475569;
     border: 1px solid rgba(100, 116, 139, 0.40);
 }
-.dark .tag-paper   { color: #34d399; border-color: rgba(52, 211, 153, 0.45); }
+.dark .tag-paper   { color: rgb(var(--accent-text-rgb)); border-color: rgb(var(--accent-text-rgb) / 0.45); }
 .dark .tag-summary { color: #94a3b8; border-color: rgba(148, 163, 184, 0.45); }
 
 /* Keep the wide Susquehanna wordmark within the wrapping sponsor row. */
