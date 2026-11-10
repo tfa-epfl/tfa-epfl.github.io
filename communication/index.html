@@ -17,81 +17,46 @@
 </script>
 	<link rel="stylesheet" href="../tailwind.css?v=e29f01d7cd">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<link rel="stylesheet" href="../style.css?v=d80bac3387">
+	<link rel="stylesheet" href="../style.css?v=c171ac311c">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="../navigation.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 dark-transition">
-    <!-- Navigation - ADDED PUBLICATIONS LINK -->
-    <nav class="navbar-bg bg-white shadow-md fixed top-0 w-full z-50 dark:bg-gray-900 dark-transition">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 flex items-center justify-center shadow-lg">
-					<img src="../logo/TFA_Bull.svg" class="tfa-logo" width="826" height="638" alt="">
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold text-gray-800 dark:text-white">The Finance Association</h1>
-                    <p class="text-xs text-gray-600 dark:text-gray-400">EPFL</p>
-                </div>
-            </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Desktop menu -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                       Home 
-                    </a>
-                    <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                        Activities
-                    </a>
-                    <a href="../partners/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                        Partnership
-                    </a>
-                    <a href="../research/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                       Quant track 
-                    </a>
-                    <a href="../events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                        Events
-                    </a>
-                    <!-- ADDED: Publications link -->
-                    <a href="#publications" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                        Research
-                    </a>
-                    <a href="../team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                    	Team
-                    </a>
-                    <a href="../links/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">Links</a>
-                    <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent transition-all duration-300 link-underline">
-                        Contact
-                    </a>
-                </div>
-                
-                <!-- Theme toggle button -->
-                <button id="theme-toggle" class="theme-toggle w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 flex items-center justify-center shadow-sm transition-all duration-300">
-                    <i id="theme-icon" class="fas fa-sun text-gray-700 dark:text-yellow-300"></i>
-                </button>
-                
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+
+    <nav aria-label="Main navigation" class="navbar-bg bg-white shadow-md fixed top-0 w-full z-50 dark:bg-gray-900 dark-transition">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="../index.html" aria-label="TFA EPFL home" class="flex items-center space-x-3">
+          <div class="w-10 h-10 flex items-center justify-center shadow-lg">
+            <img src="../logo/TFA_Bull.svg" class="tfa-logo" width="826" height="638" alt="">
+          </div>
+          <div>
+            <p class="text-xl font-bold text-gray-800 dark:text-white">The Finance Association</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400">EPFL</p>
+          </div>
+        </a>
+        <div class="flex items-center space-x-4">
+          <div id="site-menu" class="site-menu bg-white dark:bg-gray-900 shadow-lg font-medium text-gray-700 dark:text-gray-300">
+            <a href="../index.html#mission">Mission</a>
+            <a href="../index.html#activities">Activities</a>
+            <a href="../index.html#it">IT &amp; Infra</a>
+            <a href="../partners/index.html">Partnership</a>
+            <a href="../communication/index.html" aria-current="page">Podcast</a>
+            <a href="../events.html">Events</a>
+            <a href="../research/index.html">Research</a>
+            <a href="../team.html">Team</a>
+            <a href="../links/index.html">Links</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <button id="theme-toggle" type="button" aria-label="Toggle theme" class="theme-toggle w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 flex items-center justify-center shadow-sm transition-all duration-300">
+            <i id="theme-icon" class="fas fa-sun text-gray-700 dark:text-yellow-300" aria-hidden="true"></i>
+          </button>
+          <button id="mobile-menu-button" type="button" aria-label="Main menu" aria-controls="site-menu" aria-expanded="false" class="text-gray-600 dark:text-gray-300">
+            <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+          </button>
         </div>
-        
-        <!-- Mobile menu - ADDED PUBLICATIONS LINK -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700 px-4 py-3 shadow-lg dark-transition">
-            <div class="flex flex-col space-y-3">
-                <a href="../index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Home</a>
-                <a href="#activities" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Activities</a>
-                <a href="../events.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Events</a>
-                <!-- ADDED: Publications link -->
-                <a href="../research/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Research</a>
-                <a href="../team.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Team</a>
-                <a href="../links/index.html" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Links</a>
-                <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-green-accent py-2 transition-all duration-300">Contact</a>
-            </div>
-        </div>
+      </div>
     </nav>
 
 
@@ -498,7 +463,7 @@ How Swiss Finance is Evolving: AMAS CEO Adrian Schatzmann Explains"
                         <ul class="space-y-4">
                             <li class="flex items-start group">
                                 <i class="fas fa-globe text-green-accent mt-1 mr-3"></i>
-                                <a href="tfa-epfl.ch" class="text-gray-400 hover:text-green-accent transition-all duration-300">tfa-epfl.ch</a>
+                                <a href="../index.html" class="text-gray-400 hover:text-green-accent transition-all duration-300">tfa-epfl.ch</a>
                             </li>
                             <li class="flex items-start">
 								<div class="w-12 h-12 flex items-center justify-center shadow-lg">
@@ -578,29 +543,6 @@ How Swiss Finance is Evolving: AMAS CEO Adrian Schatzmann Explains"
     		}, 500);
 });
 
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-            
-            const icon = this.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('mobile-menu').classList.add('hidden');
-                document.getElementById('mobile-menu-button').querySelector('i').classList.remove('fa-times');
-                document.getElementById('mobile-menu-button').querySelector('i').classList.add('fa-bars');
-            });
-        });
-
         const backToTopButton = document.getElementById('back-to-top');
         
         window.addEventListener('scroll', function() {
@@ -631,36 +573,6 @@ How Swiss Finance is Evolving: AMAS CEO Adrian Schatzmann Explains"
             }
         });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                if (href === '#' || href.startsWith('#!')) return;
-                
-                e.preventDefault();
-                
-                const mobileMenu = document.getElementById('mobile-menu');
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.querySelector('i').classList.remove('fa-times');
-                    mobileMenuButton.querySelector('i').classList.add('fa-bars');
-                }
-                
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    const navbarHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - navbarHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
 
         function initScrollAnimations() {
             document.querySelectorAll('section, .fade-in-up').forEach(el => {
